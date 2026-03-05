@@ -52,9 +52,9 @@ node phishnetengine
 
 # Follow the interactive menu:
 # 1. Choose "Create new project"
-# 2. Enter project name (e.g., "facebook-login")
-# 3. Enter site name (e.g., "facebook")  
-# 4. Enter endpoints (e.g., "/login,/auth,/2fa")
+# 2. Enter project name (e.g., facebook-login)
+# 3. Enter site name (e.g., facebook)  
+# 4. Enter endpoints (e.g., /login,/auth,/2fa)
 
 # stop it press ctrl+c
 
@@ -287,3 +287,6 @@ http://localhost:3000/admin-RANDOMTOKEN
 
 **CSV Export**
 - Dynamic columns for ALL fields found in captures. Opens in Excel/LibreOffice.
+
+## License 
+This project is licensed under the MIT License.

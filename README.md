@@ -16,7 +16,7 @@ By using this software, you agree that:
 - Users must **comply with all applicable local, state, national, and international laws**.
 
 Unauthorized use of this tool may violate cybersecurity, privacy, and computer misuse laws.  
-The authors of this project **are not responsible for any illegal use or misuse of this software**.
+The author of this project **are not responsible for any illegal use or misuse of this software**.
 
 ## Features
 - **Host Any Website** - Drop your HTML/CSS/JS files and they're live instantly

@@ -179,3 +179,53 @@ node phishnetengine
 # Select "instagram-campaign"
 ```
 
+### Complete Manual Setup Example
+
+```bash
+# 1. Create folder
+mkdir -p sites/linkedin-phish
+
+# 2. Paste cloned LinkedIn files
+cp -r ~/Downloads/linkedin-clone/* sites/linkedin-phish/
+
+# 3. Create config.json
+cat > sites/linkedin-phish/config.json << 'EOF'
+{
+  "name": "linkedin-phish",
+  "site": "linkedin",
+  "endpoints": ["/login", "/auth", "/checkpoint"],
+  "port": 3000,
+  "created": 1678901234567
+}
+EOF
+
+# 4. Verify structure
+ls -la sites/linkedin-phish/
+# Should show:
+#   config.json
+#   index.html
+#   css/
+#   js/
+#   img/
+
+# 5. Run engine and load project
+node phishnetengine
+# Choose "Load existing project"
+# Select "linkedin-phish"
+
+```
+
+## Adding Website Files
+
+Place your HTML, CSS, JS, and images in the project folder:
+
+```bash
+sites/instagram-login/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── img/
+    └── logo.png
+```

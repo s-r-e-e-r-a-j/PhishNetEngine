@@ -12,7 +12,7 @@ By using this software, you agree that:
 - You will **only use this tool on systems you own or have explicit written permission to test**.
 - You will **not use this tool for illegal phishing, credential harvesting, or any malicious activities**.
 - Any misuse of this software is **the sole responsibility of the user**.
-- The developers **assume no liability and are not responsible for any misuse, damage, or legal consequences caused by this tool**.
+- The developer **assumes no liability and are not responsible for any misuse, damage, or legal consequences caused by this tool**.
 - Users must **comply with all applicable local, state, national, and international laws**.
 
 Unauthorized use of this tool may violate cybersecurity, privacy, and computer misuse laws.  

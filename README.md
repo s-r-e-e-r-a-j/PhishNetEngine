@@ -80,14 +80,14 @@ node phishnetengine
 ```text
 phishnet-engine/
 ├── phishnetengine.js   # Main entry point
-├── config/                  # Configuration files
-├── utils/                   # Utility functions
-├── handlers/                # Tunnel handlers (cloudflared, serveo)
-├── panels/                  # Admin panel
-├── engine/                  # Core engine
+├── config/   # Configuration files
+├── utils/    # Utility functions
+├── handlers/  # Tunnel handlers (cloudflared, serveo)
+├── panels/  # Admin panel
+├── engine/  # Core engine
 ├── sites/   # YOUR WEBSITE PROJECTS GO HERE
-│   └── your-project/        # Each project folder
-│       ├── config.json      # Project settings (MANDATORY)
+│   └── your-project/  # Each project folder
+│       ├── config.json   # Project settings (MANDATORY)
 │       ├── index.html   # Your website files
 │       ├── css/  # CSS files
 │       ├── js/  # JavaScript files

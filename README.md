@@ -96,3 +96,28 @@ phishnet-engine/
 └── .server/  # Tunnel binaries (cloudflared)
 
 ```
+
+
+## Understanding config.json
+
+`config.json` is **MANDATORY** for every project. Without it, the engine ignores your folder.
+
+### Example config.json:
+
+```json
+{
+  "name": "facebook-login",
+  "site": "facebook",
+  "endpoints": ["/login", "/auth", "/2fa"],
+  "port": 3000,
+  "created": 1678901234567
+}
+```
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| `name` | Must match folder name | `"facebook-login"` |
+| `site` | Site identifier for logs | `"facebook"` |
+| `endpoints` | POST routes to capture | `["/login", "/auth"]` |
+| `port` | Server port | `3000` |
+| `created` | Unix timestamp | `1678901234567` |

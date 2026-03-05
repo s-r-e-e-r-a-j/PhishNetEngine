@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+
+// Developer: Sreeraj
+// GitHub: https://github.com/s-r-e-e-r-a-j
+
 import { PhishNetEngine } from './engine/index.js';
 import chalk from 'chalk';
 

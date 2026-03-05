@@ -1,3 +1,6 @@
+// Developer: Sreeraj
+// GitHub: https://github.com/s-r-e-e-r-a-j
+
 import crypto from 'crypto';
 import fs from 'fs-extra';
 import path from 'path';

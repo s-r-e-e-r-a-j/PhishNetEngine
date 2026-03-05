@@ -1,0 +1,13 @@
+{
+  "name": "phishnet",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.11",
+    "axios": "^1.5.0",
+    "body-parser": "^1.20.2"
+  }
+}

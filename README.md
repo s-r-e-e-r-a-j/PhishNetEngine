@@ -258,7 +258,7 @@ The engine captures ALL form fields - any name, any type:
 PhishNetEngine supports automatic redirection after a form submission.
 If a "redirect" field is included in the POST request, the server will redirect the user to the specified URL. Otherwise, it will redirect to a default URL (`"https://google.com"`).
 
-***Example HTML Form**
+**Example HTML Form**
 ```html
 <form action="/login" method="POST">
   <input type="text" name="email" placeholder="Email">

@@ -126,7 +126,7 @@ export class PhishNetEngine {
             {
                 type: 'input',
                 name: 'endpoints',
-                message: 'Endpoints (comma separated, e.g., /login,/auth):',
+                message: 'Endpoints (comma separated, e.g., /login,/auth) [default: /login]:',
                 default: '/login'
             }
         ]);

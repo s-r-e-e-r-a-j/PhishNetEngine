@@ -118,7 +118,7 @@ phishnet-engine/
   "name": "facebook-login",
   "site": "facebook",
   "endpoints": ["/login", "/auth", "/2fa"],
-   "redirect": "https://www.facebook.com",
+  "redirect": "https://www.facebook.com",
   "port": 3000,
   "created": 1678901234567
 }

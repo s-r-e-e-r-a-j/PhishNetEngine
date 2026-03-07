@@ -280,6 +280,16 @@ http://localhost:3000/admin-RANDOMTOKEN
 - Uses SSH tunneling
 - Good alternative if cloudflared fails
 
+**LocalHost (No Tunnel)**
+- Runs the server locally without creating a public tunnel
+- Default port is `3000` (or your custom port)
+
+You can also run the server locally and use an external/manual tunnel.  
+If you choose **LocalHost**, you can connect any tunnel service (like ngrok or your own VPS tunnel) to the running port.  
+The default port is **3000**, but if you set a custom port, use that port when creating the external tunnel.
+
+The integrated (built-in) tunnels are **Cloudflared** and **Serveo.net**.
+
 ## Export Options
 **JSON Export**
 - Includes ALL data including raw fields and metadata. Perfect for analysis.

@@ -229,21 +229,6 @@ node phishnetengine
 
 ```
 
-## Adding Website Files
-
-Place your HTML, CSS, JS, and images in the project folder:
-
-```bash
-sites/instagram-login/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-└── img/
-    └── logo.png
-```
-
 ## Form Data Capture
 The engine captures ALL form fields - any name, any type:
 ```html

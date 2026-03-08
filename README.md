@@ -3,6 +3,14 @@ A powerful, modular credential harvesting framework for authorized security test
 
 **PhishNetEngine** is a powerful credential harvesting engine, similar to a game engine but designed for creating phishing tools. Just as a game engine provides physics, rendering, and mechanics to build games, PhishNetEngine provides the server, tunneling, data capture, and an admin panel to build credential harvesting tools.
 
+## Security Research & Educational Purpose
+
+PhishNetEngine is developed for **security research, penetration testing, and educational purposes**. The project demonstrates how phishing frameworks and credential harvesting techniques can be structured and automated using modular components such as servers, tunneling services, data capture mechanisms, and administrative interfaces.
+
+The goal of this project is to help **cybersecurity students, researchers, and professionals** understand how credential harvesting attacks are built and operated in real-world scenarios. By studying these techniques, security practitioners can better identify phishing infrastructure, improve detection methods, and develop stronger defensive strategies.
+
+This project aims to promote **responsible security research and awareness** about the risks associated with phishing attacks and credential theft, helping organizations and individuals strengthen their security posture.
+
 ## Legal Disclaimer
 
 This tool is intended **strictly for authorized security testing, research, and educational purposes only.**

@@ -20,11 +20,10 @@ export class CloudflaredHandler {
         }
 
         console.log('[i] Downloading cloudflared...');
+        let url;
 
         try {
             const arch = process.arch;
-
-            let url;
 
             switch (arch) {
                 case 'x64':
@@ -55,7 +54,11 @@ export class CloudflaredHandler {
         } catch (error) {
             console.log('[!] Failed to download cloudflared:', error.message);
             console.log('[i] Please install manually:');
-            console.log(`   curl -L -o ${this.bin} https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64`);
+            if (url) {
+                console.log(`   curl -L -o ${this.bin} ${url}`);
+            } else {
+                console.log('   Visit: https://github.com/cloudflare/cloudflared/releases');
+            }
             console.log(`   chmod +x ${this.bin}`);
             return false;
         }

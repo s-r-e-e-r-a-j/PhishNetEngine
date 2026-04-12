@@ -18,17 +18,40 @@ export class CloudflaredHandler {
         if (fs.existsSync(this.bin)) {
             return true;
         }
-        
+
         console.log('[i] Downloading cloudflared...');
-        
+
         try {
-            const url = 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64';
-            
+            const arch = process.arch;
+
+            let url;
+
+            switch (arch) {
+                case 'x64':
+                    url = 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64';
+                    break;
+
+                case 'arm64':
+                    url = 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64';
+                    break;
+
+                case 'arm':
+                    // Node doesn't directly tell v6/v7/v8l, assume 32-bit ARM
+                    url = 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm';
+                    break;
+
+                default:
+                    throw new Error(`Unsupported architecture: ${arch}`);
+            }
+
+            console.log(`[i] Detected architecture: ${arch}`);
+
             await utils.downloadFile(url, this.bin);
             fs.chmodSync(this.bin, '755');
-            
+
             console.log('[+] Cloudflared installed successfully');
             return true;
+
         } catch (error) {
             console.log('[!] Failed to download cloudflared:', error.message);
             console.log('[i] Please install manually:');
